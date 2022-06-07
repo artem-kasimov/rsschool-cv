@@ -10,3 +10,12 @@ CSS (SASS, SCSS)
 JavaScript (Basics)  
 React (Very little bit)  
 Webpack  
+
+## Code
+```
+const findOutlier = integers => {
+    let evens = integers.filter(a => a % 2 === 0)
+    let odds = integers.filter(a => a % 2 !== 0)
+    return evens.length > odds.length ? odds[0] : evens[0]
+}
+```
