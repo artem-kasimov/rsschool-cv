@@ -1,0 +1,66 @@
+:root {
+  --main-text-color: grey;
+}
+
+@font-face {
+  font-family: 'Menlo Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Menlo Regular'), url('../fonts/Menlo-Regular.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Menlo Regular';
+  background-color: rgb(243, 253, 243);
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 5px auto;
+  background-color: #fff;
+  box-shadow: 10px 10px 55px 5px #98ec9fbb;
+  border-radius: 3px;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.menu-item {
+  margin: 15px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.menu-item a::before {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-text-color);
+  transition: 0.5s;
+}
+.menu-item a:hover {
+  font-weight: 700;
+}
+
+.menu-item a:hover::before {
+  width: 100%;
+}
