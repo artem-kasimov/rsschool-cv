@@ -5,22 +5,126 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>My CV</title>
 </head>
 
 <body>
-  <div class="container">
-    <nav class="menu">
+  <nav class="menu">
+    <div class="container">
       <ul>
-        <li class="menu-item"><a href="#">About</a></li>
-        <li class="menu-item"><a href="#">Skills</a></li>
-        <li class="menu-item"><a href="#">Code</a></li>
-        <li class="menu-item"><a href="#">Languages</a></li>
-        <li class="menu-item"><a href="#">Contacts</a></li>
+        <li class="menu-item"><a href="#about">About</a></li>
+        <li class="menu-item"><a href="#skills">Skills</a></li>
+        <li class="menu-item"><a href="#code">Code</a></li>
+        <li class="menu-item"><a href="#languages">Languages</a></li>
+        <li class="menu-item"><a href="#contacts">Contacts</a></li>
       </ul>
-    </nav>
-  </div>
+    </div>
+  </nav>
+  <div class="menu-underline"></div>
+  <main class="main">
+    <div class="container main-container">
+      <div class="photo">
+        <img src="assets/img/photo.jpg" alt="MyPhoto" width="180px">
+      </div>
+      <div class="name">
+        <h1>Artem Kasimov</h1>
+        <h3>studying web development</h3>
+      </div>
+    </div>
+    <div class="divider"></div>
+  </main>
+  <section class="about" id="about">
+    <div class="container">
+      <h2>about me:</h2>
+      <p>I am currently an office worker. I am learning javascript programming language and front-end development
+        technologies to become a front-end developer</p>
+    </div>
+    <div class="divider"></div>
+  </section>
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2>my skills:</h2>
+      <ul class="centered-ul">
+        <li>HTML</li>
+        <li>CSS (SASS, SCSS)</li>
+        <li>JavaScript (Basics)</li>
+        <li>React (Basics)</li>
+        <li>Webpack</li>
+      </ul>
+    </div>
+    <div class="divider"></div>
+  </section>
+  <section class="code" id="code">
+    <div class="container">
+      <h2>code example:</h2>
+      <p>
+        My solution of 6 kyu Kata from <a href="https://www.codewars.com/">CODEWARS</a> <strong>"Find The Parity
+          Outlier"</strong>
+      </p>
+      <br>
+      <p>
+        <em>You are given an array (which will have a length of at least 3, but could be very large) containing
+          integers. The
+          array is either entirely comprised of odd integers or entirely comprised of even integers except for a single
+          integer N. Write a method that takes the array as an argument and returns this "outlier" N.</em>
+      </p>
+      <pre>
+        <code>
+          const findOutlier = integers => {
+            let evens = integers.filter(a => a % 2 === 0)
+            let odds = integers.filter(a => a % 2 !== 0)
+
+            return evens.length > odds.length ? odds[0] : evens[0]
+          }
+        </code>
+      </pre>
+    </div>
+    <div class="divider"></div>
+  </section>
+  <section class="languages" id="languages">
+    <div class="container">
+      <h2>languages:</h2>
+      <ul class="centered-ul">
+        <li><strong>Russian</strong> - Native</li>
+        <li><strong>English</strong> - According to the test at
+          <a href="https://www.efset.org/">https://www.efset.org/</a>:
+        </li>
+      </ul>
+      <p>
+        <i>
+          Your score indicates that your level of English is</i> <b> in the range of <u>B1 INTERMEDIATE</u> to <u>B2
+            UPPER
+            INTERMEDIATE</u> </b>,
+        <i>according to the guidelines set by the Common European Framework of Reference (CEFR). You understand the
+          main points of what you hear and read in English, and you are beginning to follow abstract topics with
+          relative confidence.</i>
+
+      </p>
+    </div>
+    <div class="divider"></div>
+  </section>
+  <section class="contacts" id="contacts">
+    <h2>contacts:</h2>
+    <ul class="centered-ul">
+      <li><b>Location</b>: Ufa, Russia</li>
+      <li><b>Email</b>: <a href="mailto:xartem.kx@gmail.com">xartem.kx@gmail.com</a></li>
+      <li><b>GitHub</b>: <a href="https://github.com/artem-kasimov/">https://github.com/artem-kasimov/</a></li>
+    </ul>
+  </section>
+  <footer>
+    <div class="container">
+      <p><a href="https://github.com/artem-kasimov/"><svg height="32" aria-hidden="true" viewBox="0 0 16 16"
+            version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+            <path fill-rule="evenodd"
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg></a></p>
+      <p><a href="https://rs.school/js-stage0/"><img src="assets/img/rs_school.svg" alt="RSSchool" height="30px"></a>
+      </p>
+      <p><b>2022</b></p>
+    </div>
+  </footer>
 </body>
 
 </html>
