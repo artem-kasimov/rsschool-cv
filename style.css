@@ -20,6 +20,13 @@
   color: var(--main-text-color);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
